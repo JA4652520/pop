@@ -3,8 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <title>我是可悲小孩</title>
+
+    <style>
+        div{
+            width:100%;
+            height:800px;
+            background-size: 500px;
+            background-position: center;
+        }
+        .man-p{
+            background-image: url("img/p.jpg");
+            background-repeat: no-repeat;
+        }
+        .man-op{
+            background-image: url("img/op.jpg");
+            background-repeat: no-repeat;
+        }
+
+    </style>
+
 </head>
 <body>
 
+<div class="man-p" id="sd"></div>
+<script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+<script>
+    $(function () {
+
+        $("#sd").on("mouseup", function () {
+            $("#sd").removeClass("man-op");
+            $("#sd").addClass("man-p");
+        })
+        $("#sd").on("mousedown", function () {
+            $("#sd").removeClass("man-p");
+            $("#sd").addClass("man-op");
+        })
+    });
+
+</script>
 </body>
 </html>
